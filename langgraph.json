@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "underwriting": "./src/underwriting_agent/graph.py:agent"
+  },
+  "env": ".env"
+}

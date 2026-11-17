@@ -1,0 +1,6 @@
+default_product: personal_loan
+products:
+  personal_loan:
+    display_name: Unsecured Personal Loan
+    policy_file: personal_loan.yaml
+    narrative_file: personal_loan.md

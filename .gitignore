@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets and local runtime
+.env
+.langgraph_api
+data/workspace/**
+!data/workspace/.gitkeep
+!data/workspace/extracted/.gitkeep

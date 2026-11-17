@@ -1,0 +1,39 @@
+[project]
+name = "underwriting-agent"
+version = "0.1.0"
+description = "LangGraph Deep Agent that reviews loan applications with cited evidence"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "deepagents>=0.7.30",
+    "deepagents-code>=0.1.88",
+    "langchain>=1.4.7",
+    "langchain-anthropic>=1.7.6",
+    "langchain-community>=0.4.2",
+    "langchain-core>=1.7.0",
+    "langchain-mcp-adapters>=0.3.1",
+    "langchain-ollama>=1.1.0",
+    "langchain-quickjs>=0.3.9",
+    "langgraph>=1.2.16",
+    "langgraph-cli[inmem]>=0.4.37",
+    "langsmith[sandbox]>=0.14.12",
+    "pypdf>=5.0.0",
+    "python-docx>=1.1.0",
+    "python-dotenv>=1.2.4",
+    "pyyaml>=6.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.scripts]
+underwriting-agent = "underwriting_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"

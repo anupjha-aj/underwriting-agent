@@ -1,0 +1,35 @@
+product_id: personal_loan
+display_name: Unsecured Personal Loan
+disclaimer: Illustrative sample policy for demos. Not a real bank credit policy.
+
+limits:
+  min_amount: 1000
+  max_amount: 50000
+  min_term_months: 12
+  max_term_months: 60
+  max_dti: 0.43
+  min_fico: 660
+  min_employment_months: 6
+  bankruptcy_lookback_months: 24
+
+required_document_sets:
+  - [application]
+  - [government_id]
+  - [pay_stub, tax_return]
+  - [bank_statement]
+
+rules:
+  - rule_id: amount_in_range
+    description: Requested amount must be between min_amount and max_amount.
+  - rule_id: term_in_range
+    description: Term must be between min_term_months and max_term_months.
+  - rule_id: max_dti
+    description: DTI including proposed payment must be at or below max_dti.
+  - rule_id: min_fico
+    description: FICO must be at or above min_fico when a credit summary is present.
+  - rule_id: min_employment
+    description: Primary borrower employment tenure must be at least min_employment_months.
+  - rule_id: bankruptcy_lookback
+    description: No bankruptcy within bankruptcy_lookback_months.
+  - rule_id: required_documents
+    description: Every required_document_set must be satisfied (inner lists are OR).
