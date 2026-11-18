@@ -1,4 +1,4 @@
-# Underwriting Deep Agent
+# Underwriting Deep Agent POC
 
 A LangGraph Deep Agent that reviews a loan file for a lending team. It ingests PDF and DOCX packages, classifies documents, extracts cited financials, flags gaps and inconsistencies, runs repayment-capacity tools, and returns **approve**, **decline**, or **refer** with proof.
 
